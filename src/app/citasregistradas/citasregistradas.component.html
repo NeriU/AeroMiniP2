@@ -1,0 +1,21 @@
+<h3>Vuelos Registrados</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Dia</th>
+      <th scope="col">Pais Destino</th>
+      <th scope="col">Hora</th>
+      <th scope="col">Asientos</th>
+      <th scope="col">Precio de los asientos</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let i of vuelosLocal">
+    <tr>
+      <th scope="row">{{i.diaElegido}}</th>
+      <th scope="row">{{i.pais}}</th>
+      <th scope="row">{{i.hora}}</th>
+      <th scope="row">{{i.asientos}}</th>
+      <th scope="row">{{i.totalPago}}</th>
+     
+  </tbody>
+</table>

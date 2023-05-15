@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flexbox;">
+
+  <a class="navbar-brand" href="#" style="margin-left: 2%;">
+    <img src="../../assets/img/logo.png"  class="rounded-circle" alt="Cinque Terre" >
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['home']">Heart</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['registroc']">Reservar</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['about']">Acerca de nosotros</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['tablas']" >Vuelos amigos</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['mansonry']">Variedades</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['creditos']">Creditos</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['citasregistradas']">Citas Registradas</a>
+        </li>
+    </ul>
+    <form class="d-flex" role="search" style="margin-left: 20% ;">
+      <input class="form-control mr-sm-2"
+       type="text" placeholder="Search" aria-label="Search" id="bus" #bus
+       formControlName="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="Comienza(bus.value)"[disabled]="forma.invalid">Search</button>
+    </form>
+  </div>
+</nav>
+

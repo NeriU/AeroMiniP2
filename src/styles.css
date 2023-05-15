@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+.main-container{
+    margin-top: 20px; 
+    border-radius: 4%;
+    font-family: cursive;
+    background-color: #AED9DA ;
+   
+    padding: 4%;
+    display: flexbox;
+}
+body{
+    background-color: #037367;
+    display: flexbox;
+}
+
+
+body {
+    font-family: var(--font-family);
+}

@@ -1,0 +1,66 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.cont{
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../assets/img/FondoCreditos.jpg);
+}
+
+#cajas {
+  height: 800;
+  top: 0px;
+}
+
+#caja {
+  top: 58%;
+  height: 200px;
+  display: none;
+}
+
+#cajas,
+#caja {
+  width: 1000px;
+  position: fixed;
+  left: 17%;
+  z-index: -1;
+}
+
+#text {
+  font-family: 'Rampart One', cursive;
+  background-color: transparent;
+  height: 50px;
+  text-align: center;
+  border: transparent;
+  font-size: 40px;
+  margin-top: 40px;
+}
+
+#textTitulo {
+  font-family: 'Rampart One', cursive;
+  background-color: transparent;
+  height: 50px;
+  text-align: center;
+  border: transparent;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+#colorTarjeta {
+  background: #4400ff; 
+        background: -webkit-linear-gradient(
+          to right,
+          #f12626,
+          #15f1e6
+        ); 
+        background: linear-gradient(
+          to right,
+          #ecc8a5,
+          #d6b7d4
+        ); 
+  
+}
+
+#btn-salir {
+  margin: 20px;
+}

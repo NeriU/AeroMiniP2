@@ -1,0 +1,29 @@
+@import "../scss/bootstrap.scss";
+
+.card-columns {
+    @include media-breakpoint-only(xl) {
+        column-count: 5;
+    }
+
+    @include media-breakpoint-only(lg) {
+        column-count: 4;
+    }
+
+    @include media-breakpoint-only(md) {
+        column-count: 3;
+    }
+
+    @include media-breakpoint-only(sm) {
+        column-count: 2;
+    }
+}
+
+body {
+    margin: 50px;
+    margin-top: 0px;
+    background-color: #00ff73;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+}

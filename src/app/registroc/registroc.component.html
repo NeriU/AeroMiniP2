@@ -1,0 +1,84 @@
+<div class="mmain" style="margin-top: 2%;">
+
+
+  <form [formGroup]="reservacion" style="width:50%; margin-left: 25%;" id="agendar" (ngSubmit)="guardarCambios()">
+    <!-- <div class="form-group row">
+    <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+    <div class="col-sm-10">
+      <input formControlName="nombre" type="text" class="form-control" id="nombre">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
+    <div class="col-sm-10">
+      <input formControlName="apellido" type="text" class="form-control" id="apellido">
+    </div>
+  </div> -->
+
+
+
+    <div class="form-group row ">
+      <div class="col-sm-10 offset-sm-2">
+        <!-- horas -->
+
+        <select class="bg-info" formControlName="paisselec" name="paisselec" id="paisselec"
+          (change)="paisSeleccionado()" [(ngModel)]="pais">
+          <option *ngFor="let i of destinos" [ngValue]="i">{{i}}</option>
+        </select>
+
+        <!-- <div *ngIf="pais!=''"></div> -->
+        <!-- calendario -->
+        <input class="bg-info" id="diaElegido" formControlName="diaElegido" type="date" [min]="ahora"
+          [(ngModel)]="diaElegido" (change)="validarFecha()">
+        <!-- horas -->
+
+        <select class="bg-info" formControlName="horaselec" name="horaselec" id="horaselec" [(ngModel)]="hora"
+          (change)="horaSeleccionada()">
+          <option *ngFor="let h of horas" [value]="h">{{h}}</option>
+        </select>
+
+        <div class="form-group row">
+          <label for="asientos" class="col-sm-2 col-form-label"
+            style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px;">Asientos a comprar</label>
+          <div class="col-sm-10">
+            <input formControlName="asientos" type="number" class="form-control" id="asientos" [(ngModel)]="asientosc"
+              (change)="calcularPrecio()" [max]="asientoslibres" [min]="0">
+          </div>
+        </div>
+
+
+      </div>
+      <!-- error de validacion en el calendario -->
+      <span *ngIf="this.reservacion.get('diaElegido')?.errors?.['cupollenoo']" class="alert alert-danger">
+        Esta fecha ya esta llena
+      </span>
+      <!-- error de validacion en el asientos -->
+      <span *ngIf="this.reservacion.get('asientos')?.errors?.['asientosOc']" class="alert alert-danger">
+         No quedan mas asientos para este vuelo, lo sentimos, porfavor selecciona otra fecha
+      </span>
+      <span *ngIf="contador==1" class="alert alert-success">
+      Vuelo apartado con exito
+      </span>
+
+
+
+    </div>
+
+    <div style="font-family: Georgia, 'Times New Roman', Times, serif; margin-top: 4%; font-size: 20px;">
+
+      <span *ngIf="asientosc>0">
+        El total a pagar es de {{totalPagar}}
+      </span>
+      <div class="form-group row">
+        <div class="col-sm-10" *ngIf="reservacion.valid" >
+        <button class="btn btn-warning" >Registrar</button>
+        </div>
+        </div>
+
+    </div>
+  </form>
+
+  <!-- <pre>{{reservacion.valid}}</pre>
+<pre>{{reservacion.status}}</pre> -->
+
+</div>

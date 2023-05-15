@@ -1,0 +1,103 @@
+<h1 style="text-align: center;">Acerca de Heart Fly</h1>
+<hr>
+<p>
+    Somos una empresa que le importa mucho la opinion del cliente, mensualmente realizamos una encuesta de satisfacción
+    para poder ver en que podemos mejorar, y si logramos cumplir sus expectativas, los resultados han sido muy buenos
+    aunque hemos realizado modificacones a nuestros aviones para mejorar el viaje de nuestros clientes,
+    para que puedan viajar comodos pero seguros.
+</p>
+<div>
+    <img src="../../assets/img/av.jpg" height="20%" width="40%">
+    <img src="../../assets/img/avi.jpg" style="padding-left: 10%;" height="10%" width="45%">
+</div>
+
+<br>
+<br>
+
+<div [ngClass]="'color-fondo color-fuente tamannyo-fuente border-margin'">
+    Clasificacion y lugares del nuestros aviones
+</div>
+
+<div *ngIf="datos.length != 0; else nopersonas">
+    <table class="table table-hover table-striped" style="background-image: url(../../assets/img/f.jpg);">
+        <thead>
+            <tr>
+                <th>Tipo de clase</th>
+                <th>Numero de Asientos</th>
+                <th>Codigo</th>
+                <th>Tipo de bebida</th>
+                <th>Numero de baños</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let persona of datos">
+                <td>{{persona.nom}}</td>
+                <td>{{persona.id}}</td>
+                <td>{{persona.cod}}</td>
+                <td>{{persona.beb}}</td>
+                <td>{{persona.ba}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #nopersonas>
+    <p>No hay datos sobre el avion</p>
+
+</ng-template>
+
+<br>
+
+
+
+<div>
+    <table style="margin-left: 300px;">
+        <tr>
+            <th>
+                <p-card header="Guia para viajar por primera vez en avion" subheader="" [style]="{ width: '360px' }">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="../../assets/img/prim.webp" />
+                    </ng-template>
+                    <p>
+                        Te ayudamos a saber cuales son los pasos a seguir en tu primer vuelo.
+                    </p>
+                    <ng-template pTemplate="footer">
+                        <a href="http://www.youtube.com/embed/Zvmoq-lyfpQ">
+                            <p-button label="" styleClass="p-button-rounded p-button-help"
+                                style="margin-left: 80px;">Primer vuelo!</p-button>
+                        </a>
+                    </ng-template>
+                </p-card>
+            </th>
+<br>
+            <th style="margin-left: 200px;">
+               
+        <p-image src="https://primefaces.org/cdn/primeng/images/galleria/galleria1.jpg" alt="Image" width="250" [preview]="true"></p-image>
+            </th>
+        </tr>
+    </table>
+</div>
+
+<br>
+
+<p-panel header="Requisitos para viajar en avion">
+    <p style="background-color: antiquewhite;">
+        Presenta una identificación oficial vigente con fotografía al abordar el avión, tal como tu INE o pasaporte. 
+Usa cubrebocas en el aeropuerto y durante el viaje.
+Lleva tu pase de abordar impreso o de manera digital para mostrar tu reservación. 
+    </p>
+</p-panel>
+
+<br>
+
+
+<p-progressSpinner></p-progressSpinner>
+<p-progressSpinner></p-progressSpinner>
+<p-progressSpinner></p-progressSpinner>
+<p-progressSpinner></p-progressSpinner>
+<p-progressSpinner></p-progressSpinner>
+<p-progressSpinner></p-progressSpinner>
+<p-progressSpinner></p-progressSpinner>
+<p-progressSpinner></p-progressSpinner>
+<p-progressSpinner></p-progressSpinner>
+<p-progressSpinner></p-progressSpinner>
